@@ -1,0 +1,160 @@
+/*基础样式*/
+.fix-grid-container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.fix-grid-container *{
+  box-sizing: border-box;
+}
+.fix-grid-container .fix-grid-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #4B4B4B;
+  border-right: 1px solid #E0E5E8;
+  table-layout:fixed;
+}
+
+.fix-grid-container .fix-grid-table thead tr {
+  height: 45px;
+  background: #F4F4F4;
+}
+
+
+.fix-grid-container .fix-grid-table th,
+.fix-grid-container .fix-grid-table td {
+  border-left: 1px solid #E0E5E8;
+  text-align: center;  
+}
+
+/*.fix-grid-container .fix-grid-body tbody tr:nth-child(1)>td:nth-child(n) {
+  border-top: 1px solid #E0E5E8;
+}*/
+
+.fix-grid-container .fix-grid-table th {
+  border-top: 1px solid #E0E5E8;
+  border-bottom: 1px solid #E0E5E8;
+  white-space:nowrap;
+  overflow: hidden;
+}
+
+
+.fix-grid-container .fix-grid-head {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.fix-grid-container .fix-grid-body {
+  position: relative;
+  margin-top: -45px;
+  overflow: auto;
+  height: -moz-calc(100% - 51px);
+  height: -webkit-calc(100% - 51px);
+  height: calc(100% - 51px);
+  border-bottom: 1px solid #E0E5E8;
+}
+
+.fix-grid-container .fix-grid-body tbody tr {
+  height: 30px
+}
+
+.fix-grid-container .fix-grid-body tbody tr:nth-child(2n)>td:nth-child(n) {
+  background: #F4F4F4;
+}
+
+.fix-grid-container .fix-grid-body tbody td {
+  border-bottom: 1px solid #E0E5E8;
+  word-wrap: break-word;
+}
+/*排序*/
+.fix-grid-container .sort-box {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 17px;
+  vertical-align: middle;
+  padding: 0px 0px 0px 5px;
+  height: 12px;
+}
+.fix-grid-container .currentShow{
+  display: inline;
+}
+.fix-grid-container .currentHide{
+  display: none;
+}
+/*title*/
+.fix-grid-container .headerBox{
+  box-sizing: border-box;
+  text-align: center;
+  border: 1px solid #E7EAEC;
+  border-bottom: 0px;
+  line-height: 28px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  position: relative;
+  z-index: 2;
+  border: none !important;
+  padding: 20px 0px 3px 0px;  
+}
+/*下载excel表*/
+.fix-grid-container .divDownload{
+  position:absolute; 
+  right: 3%; 
+  top: 6px;
+  width: 16px;
+  height: 16px;
+  vertical-align: top;
+  cursor: pointer;
+  z-index: 1;
+}
+.fix-grid-container .svgBox{
+  width: 16px;
+  height: 16px;
+  vertical-align: top;
+}
+/*选择行*/
+.fix-grid-container .selectedRow{
+  border: 1px solid #49A5F5 !important;
+}
+.fix-grid-container .selectedRow td{
+  border:none!important;
+  
+}
+.fix-grid-container .selectedRow td:nth-child(n+2){
+  border-left: 1px solid #E0E5E8 !important;
+}
+.fix-grid-container .preSelectedRow td{
+  border-bottom:none!important;
+}
+/*drag*/
+.fix-grid-container .thDragble{
+  position:relative;
+}
+.fix-grid-container .dragSpan{
+  position: absolute;
+  top:0px;
+  right: -2px;
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 100%;
+}
+
+.fix-grid-container .dragSpan:hover{
+  cursor: ew-resize
+}
+.dragLine{
+  width:2px;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-left: 1px dashed #1576DA;
+  z-index: 3;
+}
+
